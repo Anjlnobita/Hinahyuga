@@ -1,5 +1,5 @@
 {
-      "name": "Dazai Robot",
+      "name": "Hinata Hyuga",
       "description": "Telegram Group Management Bot.",
       "logo": "https://telegra.ph/file/ee28ffa1fa36ac19faa41.jpg",
       "keywords": [
@@ -9,7 +9,7 @@
          "manager",
          "Dazai"
       ],   
-   "repository": "https://github.com/adi6804/DazaiRobot",
+   "repository": "https://github.com/Anjlnobita/HinataHyuga",
    "stack": "heroku-22",
    "addons": [
       {
