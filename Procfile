@@ -1,1 +1,1 @@
-worker: python3 -m DazaiRobot
+worker: python3 -m HinataHyuga
