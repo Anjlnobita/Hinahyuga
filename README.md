@@ -22,7 +22,7 @@ _**ᴀᴠᴀɪʟᴀʙʟᴇ ᴏɴ ᴛᴇʟᴇɢʀᴀᴍ ᴀs [hinata](https://t.m
 ━━━━━━━━━━━━━━━━━━━━
 
 <p align="center">
-  <img src="https://telegra.ph/file/d92033060bad9004c4ad5.jpg">
+  <img src="https://envs.sh/kRs.jpg">
 </p>
 
 <p align="center">
