@@ -1,8 +1,8 @@
 # MongoDB Connection Setup
 
 from pymongo import MongoClient
-from DazaiRobot import DB_URI
-from DazaiRobot import LOGGER as log
+from Hinatahyuga import DB_URI
+from Hinatahyuga import LOGGER as log
 
 def start():
     client = MongoClient(DB_URI)
