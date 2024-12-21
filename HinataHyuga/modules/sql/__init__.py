@@ -1,7 +1,7 @@
 # MongoDB Connection Setup
 
 from pymongo import MongoClient
-from Hinatahyuga import DB_URI
+from Hinatahyuga.config import DB_URI
 from Hinatahyuga import LOGGER as log
 
 def start():
