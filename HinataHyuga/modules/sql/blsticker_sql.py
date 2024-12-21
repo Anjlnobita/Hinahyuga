@@ -4,6 +4,7 @@ from Hinatahyuga.modules.sql import nobita, client
 
 
 
+
 STICKERS_FILTER_INSERTION_LOCK = threading.RLock()
 CHAT_STICKERS = {}
 CHAT_BLSTICK_BLACKLISTS = {}
@@ -80,4 +81,24 @@ def __load_CHAT_STICKERS():
     
     all_filters = nobita.find()
     for x in all_filters:
-        CHAT_STICKERS[x['chat_id']
+        CHAT_STICKERS[x['chat_id']].append(x['trigger'])
+
+    CHAT_STICKERS = {x: set(y) for x, y in CHAT_STICKERS.items()}
+
+def __load_chat_stickerset_blacklists():
+    global CHAT_BLSTICK_BLACKLISTS
+    chats_settings = nobita.find()
+    for x in chats_settings:
+        CHAT_BLSTICK_BLACKLISTS[x['chat_id']] = {
+            "blacklist_type": x['blacklist_type'],
+            "value": x['value'],
+        }
+
+def migrate_chat(old_chat_id, new_chat_id):
+    with STICKERS_FILTER_INSERTION_LOCK:
+        chat_filters = nobita.find({'chat_id': str(old_chat_id)})
+        for filt in chat_filters:
+            nobita.update_one({'_id': filt['_id']}, {'$set': {'chat_id': str(new_chat_id)}})
+
+__load_CHAT_STICKERS()
+__load_chat_stickerset_blacklists()
